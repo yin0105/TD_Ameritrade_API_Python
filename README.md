@@ -7,6 +7,21 @@
 
 ### MySQL
 
+### Edit .env file
+USER_NAME: user's name to connect into MySQL database
+
+DB_PASSWORD: user's password to connect into MySQL database
+
+MYSQL_PATH: the path where MySQL is installed.
+
+DB_BACKUP_PATH: the path where the database will be backed up.
+
+API_KEY: API key
+
+WORK_TIME: working time
+
+REST_TIME: rest time
+
 ## Run
 ### Install Dependencies
 1. launch Powershell.
