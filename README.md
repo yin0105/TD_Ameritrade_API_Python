@@ -12,6 +12,7 @@
 1. launch Powershell.
 2. Move to project folder.
 3. Run following command. 
+
    pip install -r requirements.txt
 
 ### Create Database
