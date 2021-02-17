@@ -17,18 +17,22 @@
 
 ### Create Database
 Run following command. 
+
   python db.py -c
 
 ### Run
 Run following command. 
+
   python app.py
   
 ### Backup Database
-Run following command. 
+Run following command.
+
   python db.py
 
 ### Restore Database
 Run following command. 
+
   python db.py -r {date_time}
   
   ex. python db.py -r 20210216-111111
