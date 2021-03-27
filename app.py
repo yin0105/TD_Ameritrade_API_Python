@@ -88,7 +88,10 @@ def get_quotes(ticker):
     response = requests.get(url_quotes + "?apikey=" + api_key + "&symbol=" + ticker)
     if response.status_code == 200 :
         json_data = response.json()
-        json_data = json_data[ticker]
+        try:
+            json_data = json_data[ticker]
+        except:
+            return
         j_data = [ticker]
         key_arr = ["52WkHigh", "52WkLow", "askId", "askPrice", "askSize", "assetMainType", "assetType", "bidId", "bidPrice", "bidSize", "bidTick", "closePrice", "cusip", "delayed", "description", "digits", "divAmount", "divDate", "divYield", "exchange", "exchangeName", "highPrice", "lastId", "lastPrice", "lastSize", "lowPrice", "marginable", "mark", "markChangeInDouble", "markPercentChangeInDouble", "nAV", "netChange", "netPercentChangeInDouble", "openPrice", "peRatio", "quoteTimeInLong", "regularMarketLastPrice", "regularMarketLastSize", "regularMarketNetChange", "regularMarketPercentChangeInDouble", "regularMarketTradeTimeInLong", "securityStatus", "shortable", "totalVolume", "tradeTimeInLong", "volatility"]
         for k in key_arr:
